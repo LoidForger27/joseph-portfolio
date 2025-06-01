@@ -1,114 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ... existing head unchanged ... -->
+  <title>Joseph Baguio | Portfolio</title>
+  <meta charset="UTF-8">
 </head>
 <body>
-  <!-- ... existing content unchanged ... -->
-
-  <section id="projects">
-    <h2>Web3 & Community</h2>
-    <p>I'm actively involved in Web3 communities and DEX trading...</p>
-    <div class="project-cards">
-      <div class="card">
-        <h3>DEX Trading Guide</h3>
-        <p>A walkthrough for beginners getting started with decentralized exchanges.</p>
-        <a class="btn" href="#">Read More</a>
-      </div>
-      <div class="card">
-        <h3>Telegram Mods Handbook</h3>
-        <p>Best practices for managing and growing crypto communities on Telegram.</p>
-        <a class="btn" href="#">Read More</a>
-      </div>
-    </div>
-  </section>
-
   <section id="blog">
     <h2>Blog</h2>
     <div class="blog-preview">
       <article>
         <h3>Why Customer Support is the Soul of Web3</h3>
         <p>Explore how trust, empathy, and speed shape the user experience in decentralized platforms.</p>
-        <a class="btn" href="#">Read Post</a>
+        <a class="btn" href="blog-post-1.html">Read Post</a>
       </article>
       <article>
         <h3>5 Things I Learned Working for a Crypto Exchange</h3>
         <p>From compliance surprises to building trust with skeptical users, here's what no one tells you about being on the frontlines of crypto support.</p>
-        <a class="btn" href="#">Read Post</a>
+        <a class="btn" href="blog-post-2.html">Read Post</a>
       </article>
       <article>
         <h3>Support Agents are the Unsung Heroes of Web3</h3>
         <p>Support is not just a backend team—it's often the face of your project. Here's how to empower and retain your frontline team.</p>
-        <a class="btn" href="#">Read Post</a>
+        <a class="btn" href="blog-post-3.html">Read Post</a>
       </article>
     </div>
   </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <input type="submit" value="Send Message" />
-    </form>
-    <p>Email: <a href="mailto:ioseph.ab@gmail.com">ioseph.ab@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/joseph-baguio-a1a37b2a8" target="_blank">linkedin.com/in/joseph-baguio-a1a37b2a8</a></p>
-    <a class="btn" href="Resume_Joseph_Baguio.pdf" download>Download Resume (PDF)</a>
-  </section>
-
-  <footer><p>&copy; 2025 Joseph Baguio</p></footer>
-  <script>
-    function toggleTheme() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
-    }
-
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
-
-  <style>
-    .project-cards {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .card {
-      background: #1f2937;
-      border-radius: 10px;
-      padding: 1rem;
-      flex: 1 1 300px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: var(--accent-color);
-    }
-    .blog-preview {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .blog-preview article {
-      background: #1f2937;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    }
-    .blog-preview h3 {
-      color: var(--accent-color);
-    }
-  </style>
 </body>
 </html>
