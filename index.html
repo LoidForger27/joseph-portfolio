@@ -2,29 +2,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Joseph Baguio | Portfolio</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joseph Baguio | Interactive Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0f1117;
+      color: #e0e0e0;
+      display: grid;
+      grid-template-columns: 300px 1fr 300px;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .sidebar, .portfolio, .details {
+      background: #1c1f26;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .avatar {
+      width: 100%;
+      aspect-ratio: 1;
+      background: url('avatar.jpg') center/cover no-repeat;
+      border-radius: 10px;
+    }
+    .toggle-btns button {
+      width: 100%;
+      margin-top: 0.5rem;
+      background: #2d2f36;
+      border: none;
+      padding: 0.75rem;
+      color: #58a6ff;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .toggle-btns button:hover {
+      background-color: #374151;
+      transform: scale(1.05);
+    }
+    .contact-btn {
+      background: #58a6ff;
+      color: white;
+      border: none;
+      padding: 1rem;
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .social-icons a {
+      margin: 0.5rem;
+      display: inline-block;
+      color: #ccc;
+      font-size: 1.4rem;
+      text-decoration: none;
+    }
+    .portfolio h2, .details h2 {
+      color: #58a6ff;
+      margin-bottom: 1rem;
+    }
+    .card {
+      background: #262b36;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .footer {
+      grid-column: span 3;
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+  <script>
+    function playToggleSound() {
+      const audio = new Audio('toggle.mp3');
+      audio.play();
+    }
+  </script>
 </head>
 <body>
-  <section id="blog">
-    <h2>Blog</h2>
-    <div class="blog-preview">
-      <article>
-        <h3>Why Customer Support is the Soul of Web3</h3>
-        <p>Explore how trust, empathy, and speed shape the user experience in decentralized platforms.</p>
-        <a class="btn" href="blog-post-1.html">Read Post</a>
-      </article>
-      <article>
-        <h3>5 Things I Learned Working for a Crypto Exchange</h3>
-        <p>From compliance surprises to building trust with skeptical users, here's what no one tells you about being on the frontlines of crypto support.</p>
-        <a class="btn" href="blog-post-2.html">Read Post</a>
-      </article>
-      <article>
-        <h3>Support Agents are the Unsung Heroes of Web3</h3>
-        <p>Support is not just a backend team—it's often the face of your project. Here's how to empower and retain your frontline team.</p>
-        <a class="btn" href="blog-post-3.html">Read Post</a>
-      </article>
+  <div class="sidebar">
+    <div class="avatar"></div>
+    <button class="contact-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
+    <div class="toggle-btns">
+      <button onclick="playToggleSound()">Customer Support Pro</button>
+      <button onclick="playToggleSound()">Web3 Enthusiast</button>
+      <button onclick="playToggleSound()">Remote Instructor</button>
     </div>
-  </section>
+  </div>
+
+  <div class="portfolio">
+    <h2>Browse My Portfolio</h2>
+    <div class="card">
+      <h3>Web3 & Community</h3>
+      <p>I'm actively involved in Web3 communities and DEX trading. I share guides and moderate spaces focused on onboarding and support for blockchain projects.</p>
+    </div>
+    <div class="card">
+      <h3>Blog</h3>
+      <p>Coming soon: insights from my support career, crypto tutorials, and reflections on customer success in Web3.</p>
+    </div>
+    <div class="card">
+      <h3>Years of Freelancing</h3>
+      <p>6 years of remote work experience across global clients and platforms.</p>
+    </div>
+  </div>
+
+  <div class="details">
+    <h2>Side Projects & Socials</h2>
+    <div class="social-icons">
+      <a href="https://x.com/zenyro_" target="_blank">𝕏</a>
+      <a href="https://www.linkedin.com/in/joseph-baguio-a1a37b2a8/" target="_blank">in</a>
+      <a href="https://github.com/LoidForger27" target="_blank">GH</a>
+      <a href="https://t.me/zenyro_27" target="_blank">TG</a>
+    </div>
+    <div class="card">
+      <h3>Top Tools</h3>
+      <ul>
+        <li>Zendesk & CRM</li>
+        <li>Amadeus / Sabre GDS</li>
+        <li>Community Mods</li>
+        <li>Task Instructor</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">&copy; 2025 Joseph Baguio — Profiling Portfolio</div>
 </body>
 </html>
